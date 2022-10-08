@@ -1,25 +1,52 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, serif;
     background-color: black;
     color: white;
 }
 .wd-search-bar {
+    width: 80%;
+    margin: 16px;
+    padding: 0;
     height: 25px;
-    color: white;
-    background-color: rgb(105,105,105);
-
-    border-radius: 10px;
+    background-color: darkgray;
+    border-radius: 15px;
 }
 
 .wd-nav-tabs {
-
-    color: rgb(29, 161, 242);
-    padding: 0px;
+    color: rgb(110, 118, 125);
+    padding: 16px;
+    border: 1px solid rgb(47, 51, 54);
 }
 .wd-nav-tabs li {
     list-style: none;
     display: inline-block;
+    font-size: 15px;
+    padding: 16px;
 }
 .wd-nav-tabs .wd-selected {
-    border-bottom: solid 4px rgb(29, 161, 242);
+    border-bottom: solid 2px rgb(29, 161, 242);
+    color: rgb(29, 161, 242);
+}
+
+h1 {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+    margin-left: 16px;;
+}
+h2 {
+    font-size: 16px;
+    margin-left: 16px;;
+
+}
+h3 {
+    font-size: 11px;
+    color: rgb(110, 118, 125);
+    margin-left: 16px;;
+
+}
+
+.wd-author {
+    font-size: 13px;
+    color: white;
+    margin-left: 16px;
 }
