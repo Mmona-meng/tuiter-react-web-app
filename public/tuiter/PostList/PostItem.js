@@ -19,6 +19,20 @@ function PostItem(homePosts) {
                 <div>
                     <img src="${homePosts.image}" class="rounded-corners-all-around" height="300px">
                 </div>
+                <div class="row mt-2">
+                    <div class="col-3" style="color: gray">
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                    <div class="col-3" style="color: gray">
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                    <div class="col-3" style="color: gray">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="col-3" style="color: gray">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                </div>
             </div>           
         </div>
     `)
