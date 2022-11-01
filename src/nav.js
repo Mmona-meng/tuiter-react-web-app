@@ -1,14 +1,13 @@
 import {Link} from "react-router-dom";
 
-function Tuiter() {
-    return(
+function Nav() {
+    return (
         <div>
-            <Link to="/">Lab</Link> |
+            <Link to="/">Labs</Link> |
             <Link to="/hello">Hello</Link> |
             <Link to="/tuiter">Tuiter</Link>
-            <h1>Tuiter</h1>
         </div>
-    );
+    )
 }
 
-export default Tuiter
+export default Nav;
