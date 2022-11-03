@@ -4,7 +4,7 @@ const PostItem = ({homeposts}) => {
     return(
         <div className="row">
             <div className="col-1">
-                <img src={homeposts.avatarIcon} className="float-start rounded-circle" height={48}/>
+                <img src={homeposts.avatarIcon} className="float-start rounded-circle" height={48} alt=" "/>
             </div>
             <div className="col-11">
                 <div>
@@ -19,7 +19,7 @@ const PostItem = ({homeposts}) => {
                     {homeposts.content}
                 </div>
                 <div>
-                    <img src={homeposts.image} className="rounded-corners-all-around" height="300px"/>
+                    <img src={homeposts.image} className="rounded-corners-all-around" height="300px" alt=" "/>
                 </div>
                 <div className="row mt-2">
                     <div className="col-3" >
