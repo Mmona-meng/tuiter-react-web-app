@@ -9,7 +9,7 @@ const HomeComponent = () => {
                 postsArray.map(homeposts =>
                     <PostItem
                         key={homeposts._id}
-                        post={homeposts}/>
+                        homeposts={homeposts}/>
                 )
             }
         </ul>
