@@ -1,4 +1,8 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {updateTuitThunk} from "../../services/tuits-thunks";
+
+const dispatch = useDispatch();
 
 const TuitStats = (
     {
@@ -20,8 +24,13 @@ const TuitStats = (
                 {tuit.retuits}
             </div>
             <div className="col-3" >
-                <i className="fa-regular fa-heart"></i>
-                {tuit.likes}
+                Likes: {tuit.likes}
+                <i onClick={() =>
+                    dispatch(updateTuitThunk(
+                        {
+                            ...tuit,
+                            likes: tuit.likes + 1}
+                    )} className="bi bi-heart-fill me-2 text-danger"></i>
             </div>
             <div className="col-3" >
                 <i className="fa-solid fa-arrow-up-from-bracket"></i>
