@@ -1,5 +1,5 @@
 import React from "react";
-import TuitsList from "../tuits/tuit-list";
+import TuitsList from "../tuits/index.js";
 import WhatsHappening from "./whats-happening";
 
 const HomeComponent = () => {

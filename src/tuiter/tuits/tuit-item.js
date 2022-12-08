@@ -1,16 +1,11 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "./tuits-reducer";
+import {deleteTuit} from "../reducers/tuits-reducer";
+import TuitStats from "./tuit-stats";
 
 const TuitItem = (
     {
-        tuit = {
-            "_id": 234,
-            "userName": "SpaceX",
-            "image": "./images/profile1.jpg",
-            "handle": "@spacex",
-            "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
-        }
+        key, post
     }
 ) => {
     const dispatch = useDispatch();
@@ -18,27 +13,29 @@ const TuitItem = (
         dispatch(deleteTuit(id));
     }
     return(
-        <div className="row">
+        <div className="row" key={key}>
             <div className="col-1">
-                <img src={tuit.image} className="float-start rounded-circle" height={48} alt=" "/>
+                <img src={post.image} className="float-start rounded-circle" height={48} alt=" "/>
             </div>
-            <div className="col-11">
+            <div className="col-11 mb-2">
                 <div>
                     <span className="fw-bolder">
-                    {tuit.userName}
+                    {post.userName}
                     </span>
                     <span className="text-secondary">
-                    {tuit.handle}
+                    {post.handle}
                     </span>
                 </div>
-                <div className="text-white">
-                    {tuit.tuit}
+                <div className="text-black">
+                    {post.tuit}
                 </div>
                 <div>
                     <i className="bi bi-x-lg float-end"
-                       onClick={() => deleteTuitHandler(tuit._id)}></i>
+                       onClick={() => deleteTuitHandler(post._id)}></i>
                 </div>
+                <TuitStats replies={post.replies} retuits={post.retuits} likes={post.likes}/>
             </div>
+            <hr/>
         </div>
     )
 }
