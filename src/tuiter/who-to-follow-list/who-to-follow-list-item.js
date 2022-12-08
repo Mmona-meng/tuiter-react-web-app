@@ -1,6 +1,5 @@
 import React from "react";
 import IMA from "../../images/nasa.png"
-import NODE from "../../images/nodejs.png"
 
 const WhoToFollowListItem = (
     {
