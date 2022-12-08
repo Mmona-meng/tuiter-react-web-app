@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {createTuit} from "../reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
-import NASA from "../../images/nasa.png";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
@@ -15,7 +14,7 @@ const WhatsHappening = () => {
     return (
         <div className="row">
             <div className="col-auto">
-                <img src={NASA} width={60} alt={' '}/>
+                <img src="https://user-images.githubusercontent.com/75476123/206525327-549e139f-21ee-4bdd-a2f3-7fd2ee9d3d01.png" width={60} alt={' '}/>
             </div>
             <div className="col-10">
                <textarea value={whatsHappening} placeholder="What's happening?"
